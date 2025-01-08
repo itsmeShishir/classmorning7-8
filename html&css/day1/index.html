@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day one html</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- this is a comment -->
+    <!-- h1,h2, h3, h4, h5, h6 -->
+    <h1 id="go">this is heading one</h1>
+    <h2>this is heading one</h2>
+    <h3>this is heading one</h3>
+    <h4>this is heading one</h4>
+    <h5>this is heading one</h5>
+    <h6>this is heading one</h6>
+
+    <!-- p pre -->
+    <p>today is day one</p>
+    <pre>
+        today     is day one        
+    </pre>
+    <!-- multimedia -> audio, video, images -->
+    <img
+      src="https://plus.unsplash.com/premium_photo-1734203007978-dca43cc0f846?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8"
+      alt="this is pic from unsplash"
+    />
+    <img
+      src="./assets/img/img1.jpg"
+      alt="this is from locally"
+      height="300"
+      width="300"
+    />
+    <!-- video -->
+    <video controls>
+      <source src="./assets/video/video1.mp4" />
+    </video>
+    <!-- audio -->
+    <audio controls>
+      <source src="./assets/video/video1.mp4" />
+    </audio>
+
+    <!-- links  -->
+    <a href="#">Home</a>
+    <a href="#go">go back to top</a>
+    <a href="https://google.com">google</a>
+    <a href="https://google.com" target="_blank">google</a>
+    <a href="main.html">Go to Main Page</a>
+    <a href="tel:">Call me</a>
+    <a href="mailto:">Email Adress </a>
+    <!-- call and email -->
+
+    <!-- list  -->
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    <ol>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ol>
+
+    <!-- form -->
+    <form action="main.html">
+      <div style="background-color: aqua">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email address"
+        />
+      </div>
+      <div>
+        <label for="password">password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+        />
+      </div>
+      <div>
+        <label for="number">number</label>
+        <input type="number" name="phonenumber" id="number" placeholder="" />
+      </div>
+      <div>
+        <input type="checkbox" name="ismale" id="ismale" />
+        <label for="ismale">ismale</label>
+      </div>
+      <div>
+        <input type="radio" name="ismale" id="ismale" />
+        <label for="ismale">ismale</label>
+      </div>
+      <div>
+        <label for="about yourself">About yourself</label>
+        <textarea name="desc" id="desc" cols="6" rows="4"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <!-- section and div -->
+    <section>
+      <h1>Hello</h1>
+      <div>
+        <h1>helo child</h1>
+      </div>
+    </section>
+    <!-- table -->
+    <table>
+      <thead>
+        <th>name</th>
+        <th>rollno</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>shishir</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>shishir</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>shishir</td>
+          <td>23</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- icons -->
+    <i class="fa-solid fa-lock"></i>
+    <i class="fa-brands fa-facebook"></i>
+    <!-- br hr -->
+    <hr />
+    <p>
+      Lorem <br />
+      ipsum dolor sit amet consectetur, adipisicing elit. Culpa commodi
+      voluptate possimus voluptatum vero tempora eligendi odit velit, maxime
+      nulla.
+    </p>
+    <!-- article -->
+    <article>
+      <b>Lorem</b> <i>ipsum</i> <del>dolor</del> <strong>sit</strong> amet
+      consectetur adipisicing elit. Rerum cumque expedita quam dignissimos quasi
+      explicabo assumenda repellendus eligendi ea laudantium!
+    </article>
+  </body>
+</html>

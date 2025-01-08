@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CO+Guides&display=swap");
+
+h3 {
+  color: blue;
+  font-size: 34px;
+}
+/* selector */
+/* tag */
+h2 {
+  background-color: red;
+}
+/* id selector always use #infornt of the name */
+#h2id {
+  background-color: brown;
+}
+/* this is class selector always use . infront of the name */
+.h2class {
+  background-color: aqua !important;
+}
+/* universal */
+* {
+  padding: 0px;
+  margin: 0;
+}
+/* group selector */
+h4,
+h5,
+h6,
+p {
+  background-color: aquamarine;
+  font-size: 34px;
+  font-weight: bolder;
+}
+/* color */
+/* forground  and background color */
+
+h4 {
+  /* rgb, hexa, rgba, hsl, named color */
+  color: red;
+  background-color: yellow;
+  /* color: rgb(255, 0, 0);
+  background-color: rgb(255, 0, 255); */
+  /* color: rgba(255, 0, 0, 0.9);
+  background-color: rgba(255, 0, 255, 0.2); */
+  /* color: #ff2121;
+  background-color: #21ff21; */
+  /* color: hsl(359, 100%, 0%);
+  background-color: rgb(191, 64, 68); */
+}
+
+/* font  */
+.desc {
+  font-size: 24px;
+  font-weight: 400;
+  /* font-style: italic; */
+  font-family: "Playwrite CO Guides", Times, serif;
+}
+@font-face {
+  font-family: shishir;
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+.fonts-popp {
+  font-family: shishir;
+}
+
+.box-model {
+  border-width: 20px 2px 50px 0px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 50px;
+
+  /* padding: 20px 2px 50px 0px; */
+  padding-top: 20px;
+  padding-bottom: 100px;
+  padding-right: 60px;
+  padding-left: 50px;
+
+  /* margin -> space between two element */
+  /* margin: 24px 30px 0px 100px; */
+  margin-top: 50px;
+  margin-right: 90px;
+  margin-bottom: 300px;
+  margin-left: 70px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80vw;
+  background-color: bisque;
+}
+.container p span {
+  float: right;
+}
+.longtext {
+  width: 20vh;
+  height: 40px;
+  font-size: 16px;
+  overflow: auto;
+}
+.visited:visited {
+  color: green;
+  text-decoration: none;
+}
+.link:link {
+  color: green;
+  text-decoration: none;
+}
+.active:active {
+  color: green;
+  text-decoration: none;
+}
+.hover:hover {
+  background-color: green;
+  text-decoration: none;
+  padding: 7px 14px;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid green;
+}

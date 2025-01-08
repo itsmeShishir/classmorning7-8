@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid green;
+  transition: background-color 3s;
+  transition-delay: 1s;
+}
+.btn:hover {
+  background-color: red;
+}
+
+.one {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  transition: width 5s;
+  transition-delay: 1s;
+  transition-timing-function: ease;
+}
+.six {
+  background-color: red;
+  width: 300px;
+  position: relative;
+  height: 300px;
+  border-radius: 50%;
+  animation-name: hari;
+  animation-duration: 10s;
+}
+@keyframes hari {
+  0% {
+    left: 100px;
+    background-color: yellow;
+  }
+  25% {
+    right: 100px;
+    background-color: red;
+  }
+  50% {
+    top: 200px;
+    background-color: green;
+  }
+  75% {
+    bottom: 500px;
+    background-color: blue;
+  }
+  100% {
+    left: 0px;
+    background-color: purple;
+  }
+}
+.one:hover {
+  width: 600px;
+}
+.two {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  transition: width 5s;
+  transition-delay: 1s;
+  transition-timing-function: linear;
+}
+.two:hover {
+  width: 600px;
+}
+.three {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  transition: width 5s;
+  transition-timing-function: ease-in;
+}
+.three:hover {
+  width: 600px;
+}
+.four {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  transition: width 5s;
+  transition-delay: 1s;
+  transition-timing-function: ease-out;
+}
+.four:hover {
+  width: 600px;
+}
+.five {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  transition: width 5s;
+  transition-delay: 1s;
+  transition-timing-function: ease-in-out;
+}
+.five:hover {
+  width: 600px;
+}

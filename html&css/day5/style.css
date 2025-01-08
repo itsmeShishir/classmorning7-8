@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* .onediv {
+  display: inline;
+  height: 400px;
+  width: 50vw;
+  background-color: red;
+}
+.inlineelement {
+  display: block;
+  height: 400px;
+  width: 400px;
+  background-color: green;
+}
+
+/* display -> inline, block, inline-block , none *
+img {
+  /* display: none; *
+  visibility: hidden;
+  background-color: aqua;
+}
+/* vh and vw  *
+h1 {
+  background-color: green;
+}
+@media screen and (min-width: 550px) {
+  h1 {
+    font-size: 1em;
+    /* 16px -> 1em *
+    background-color: aqua;
+  }
+}
+h2 {
+  font-size: 1rem;
+  /* 16px -> 1rem *
+}
+h3 {
+  font-size: 16px;
+  /* 1px = 1px 
+}
+/* combinators -> descendend 
+div h1 {
+  color: yellow;
+}
+
+div > h1 {
+  font-style: italic;
+}
+div ~ p {
+  color: blue;
+}
+div + p {
+  color: yellow;
+}
+/* background image 
+div {
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
+  background-image: url("https://images.unsplash.com/photo-1721332153370-56d7cc352d63?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}*/
+section {
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
+}
+section img {
+  width: 20vw;
+  height: 20vh;
+  opacity: 0.5;
+  /* object-position: center center; */
+}
