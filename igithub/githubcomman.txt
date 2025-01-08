@@ -1,0 +1,7 @@
+git init
+git add .
+git commit -m "Your message"
+git branch -M main
+git remote add origin repourl.git
+git push -u origin main
+git push --set-upstream origin main
