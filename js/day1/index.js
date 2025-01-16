@@ -20,7 +20,7 @@ let b = 20;
 console.log(b);
 const c = 30;
 console.log(c);
-//  Data types
+// Data types
 /*
 1. String => abcd, '', ""
 2. Number -> int, double/float, complex -> 3j+i
@@ -46,7 +46,11 @@ types = {
   1: "hari",
 };
 console.log(typeof types);
+types = [1, 2, 3, "hari", true];
+console.log(typeof types);
+
 // operators
+// operands
 /*
 Arithmetic Operators 
 Assignment Operators 
@@ -86,6 +90,8 @@ console.log(false || false); //false
 // !
 console.log(!true); //false
 console.log(!false); //true
+
 //Ternary Operators
 let age = 19;
 console.log(age >= 20 ? "you are above 20" : "you are below 20");
+
