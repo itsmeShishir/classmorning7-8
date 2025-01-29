@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6, events and DOM</title>
+  </head>
+  <body>
+    <h1>ES6, events and DOM</h1>
+    <button onclick="handleClick()">Click me</button>
+    <button onclick="showDate()">Click me</button>
+    <p id="today"></p>
+    <p id="demo">Click me</p>
+    <form>
+      <input type="text" />
+      <button onsubmit="">Submit</button>
+    </form>
+    <script src="script.js"></script>
+    <script>
+      function handleClick() {
+        alert("Button clicked");
+      }
+
+      let today = document.getElementById("today");
+      function showDate() {
+        today.innerHTML = Date();
+      }
+      let demo = document.getElementById("demo");
+      demo.addEventListener("click", function () {
+        alert("Button clicked");
+      });
+    </script>
+  </body>
+</html>
