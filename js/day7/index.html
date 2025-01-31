@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page | BASIC DOM</title>
+  </head>
+  <body>
+    <button onclick="changeTitle()">Change Title</button>
+    <h1 id="title">HEllo world</h1>
+    <h1 class="classtitle">HEllo world</h1>
+    <p class="classtitle">HEllo world</p>
+    <h2>HEllo world for h2</h2>
+    <div id="element"></div>
+    <img />
+    <script>
+      // getElementById(): Selects an element by its ID.
+      // getElementsByClassName(): Selects elements by class name.
+      // getElementsByTagName(): Selects elements by tag name.
+      // querySelector(): Selects the first matching element using a CSS selector.
+      // querySelectorAll(): Selects all matching elements using a CSS selector.
+
+      let title = document.getElementById("title");
+      let classtitle = document.getElementsByClassName("classtitle");
+      let h2 = document.getElementsByTagName("h2");
+      let query = document.querySelector(".classtitle");
+      let element = document.getElementById("element");
+      let img = document.querySelector("img");
+      title.removeAttribute("id");
+      img.setAttribute("src", "https://picsum.photos/200/300");
+      img.setAttribute("width", "400px");
+
+      console.log(img.getAttribute("src"));
+      //   css change
+      h2[0].style.color = "red";
+      h2[0].style.backgroundColor = "green";
+      let h1 = document.createElement("h1");
+      h1.textContent = "New Content";
+      element.appendChild(h1);
+      //  remove
+      h1.remove();
+
+      function changeTitle() {
+        title.innerHTML = "Change Title";
+        classtitle[1].innerHTML = "Change Title in p";
+        query.innerHTML = "Change Title in query";
+        h2[0].textContent = "Change Title in h2";
+        element.textContent = "New Content";
+      }
+    </script>
+  </body>
+</html>
+
+<!-- responsive nav bar, inc and dec, todo app,weather api, -->
+<!-- tiktack toe, drag and drop, slider -->

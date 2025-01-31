@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive nav bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav
+      class="md:w-[70vw] h-16 md:mx-auto flex items-center justify-around md:start md:gap-10"
+    >
+      <h1
+        class="text-3xl font-extrabold text-blue-700 md:w-[20vw] font-['Poppins']"
+      >
+        Digi<span class="text-black">Marketing</span>
+      </h1>
+      <div
+        class="hidden md:block md:flex md:items-center md:w-[60vw] md:justify-between"
+      >
+        <div class="flex gap-10 font-['Poppins']">
+          <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+            >Home</a
+          >
+          <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+            >About</a
+          >
+          <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+            >Services</a
+          >
+          <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+            >Pages</a
+          >
+          <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+            >contact</a
+          >
+        </div>
+        <div class="flex gap-10 items-center">
+          <i
+            class="fa-solid fa-magnifying-glass text-[16px] bg-grey-300 p-3 bg-gray-200 rounded-full"
+          ></i>
+          <a href="#" class="bg-blue-900 text-white px-9 py-3 rounded"
+            >Purchase</a
+          >
+        </div>
+      </div>
+      <i class="fa-regular fa-moon text-2xl"></i>
+      <i
+        id="menu"
+        class="fa-solid fa-bars text-lg bg-blue-900 text-white py-1 px-2 rounded md:hidden block"
+      ></i>
+    </nav>
+    <div
+      class="abc md:hidden flex items-center gap-10 flex-col justify- bg-blue-200 p-5"
+    >
+      <div class="flex flex-col gap-10 font-['Poppins']">
+        <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+          >Home</a
+        >
+        <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+          >About</a
+        >
+        <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+          >Services</a
+        >
+        <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+          >Pages</a
+        >
+        <a href="#" class="text-[16px] hover:text-red-500 hover:font-semibold"
+          >contact</a
+        >
+      </div>
+      <div class="flex flex-col gap-10 items-center">
+        <i
+          class="fa-solid fa-magnifying-glass text-[16px] bg-grey-300 p-3 bg-gray-200 rounded-full"
+        ></i>
+        <a href="#" class="bg-blue-900 text-white px-9 py-3 rounded"
+          >Purchase</a
+        >
+      </div>
+    </div>
+    <script>
+      let menu = document.getElementById("menu");
+      menu.addEventListener("click", function () {
+        let nav = document.querySelector(".abc");
+        nav.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

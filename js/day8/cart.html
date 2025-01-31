@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="w-[75vw] mx-auto flex flex-col justify-center space-y-4">
+      <h1 class="text-3xl font-extrabold text-red-500">Your Cart</h1>
+      <div class="flex flex-col justify-between items-center gap-10">
+        <div class="flex justify-between items-center w-[40vw]">
+          <img src="https://picsum.photos/200/300" alt="" class="w-16 h-16" />
+          <div class="flex flex-col justify-center items-center">
+            <h1>Product 1</h1>
+            <p>price : <span class="price" id="price">200</span></p>
+          </div>
+          <div class="flex justify-center items-center gap-4">
+            <button id="inc" class="border-2 border-gray-300 rounded-md px-4">
+              +
+            </button>
+            <p id="value">1</p>
+            <button id="dec" class="border-2 border-gray-300 rounded-md px-4">
+              -
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center w-[40vw]">
+          <img src="https://picsum.photos/200/300" alt="" class="w-16 h-16" />
+          <div class="flex flex-col justify-center items-center">
+            <h1>Product 1</h1>
+            <p>price : <span class="price" id="price">200</span></p>
+          </div>
+          <div class="flex justify-center items-center gap-4">
+            <button id="inc" class="border-2 border-gray-300 rounded-md px-4">
+              +
+            </button>
+            <p id="value">1</p>
+            <button id="dec" class="border-2 border-gray-300 rounded-md px-4">
+              -
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-between items-center w-[40vw]">
+          <img src="https://picsum.photos/200/300" alt="" class="w-16 h-16" />
+          <div class="flex flex-col justify-center items-center">
+            <h1>Product 1</h1>
+            <p>price : <span class="price" id="price">200</span></p>
+          </div>
+          <div class="flex justify-center items-center gap-4">
+            <button id="inc" class="border-2 border-gray-300 rounded-md px-4">
+              +
+            </button>
+            <p id="value">1</p>
+            <button id="dec" class="border-2 border-gray-300 rounded-md px-4">
+              -
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let total = 1;
+      let inc = document.getElementById("inc");
+      let dec = document.getElementById("dec");
+      let value = document.getElementById("value");
+      let price = document.getElementById("price");
+      let totalprice = 200;
+
+      function updateOneprice() {
+        totalprice = parseInt(value.innerHTML) * 200;
+        price.innerHTML = totalprice;
+      }
+      inc.addEventListener("click", () => {
+        if (total < 10) {
+          total++;
+          value.textContent = total;
+          updateOneprice();
+        } else {
+          alert("You can't add more than 10 items");
+        }
+      });
+      dec.addEventListener("click", () => {
+        if (total > 1) {
+          total--;
+          value.textContent = total;
+          let tolals = parseInt(value.innerHTML) * 200;
+          price.innerHTML = tolals;
+        } else {
+          alert("You can't remove more than 1 item");
+        }
+      });
+    </script>
+  </body>
+</html>
