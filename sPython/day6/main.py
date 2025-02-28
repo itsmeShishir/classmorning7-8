@@ -116,3 +116,54 @@ def varlkpar(**kwargs):
         print(Keys, Values)
 
 varlkpar(a = 10,b = 20, c =30, d = 40, e = 50,f = 60,g = 70,h = 80,i = 90,j = 100)
+
+# anormous function -> lambda expression
+# lambda arguments: expression
+# there should be argument in lambda expression
+# add two numbers
+
+x = lambda a,b : a+b
+print(x(10,20))
+
+# lamda without argument
+x = lambda : "hello"
+print(x())
+
+# function map, filter
+# map
+let = [1,2,3,4,5]
+let2 = list(map(lambda x : x % 2 == 0, let))
+print(let2)
+
+# filter
+let = [1,2,3,4,5]
+let2 = list(filter(lambda x : x % 2 == 0, let))
+print(let2)
+
+#list comprehension - > write a loop in single line
+let3 = []
+for i in range(1,11):
+    if(i%2 == 0):
+        let3.append(i)
+print(let3)
+
+# cover to list comprehension
+let4 = [i for i in range(1,12) if i % 2 == 0]
+print(let4)
+
+import math
+import random
+
+let5 = random.randint(1,5)
+print(let5)
+let6 = math.pi
+print(let6)
+let7 = math.sqrt(16)
+print(let7)
+let8 = "shishir"
+print(let8.upper())
+let8 = "SHISHIR"
+print(let8.lower())
+let8 = "shishir"
+print(let8.title())
+
