@@ -79,18 +79,19 @@ class Parent1:
     def __init__(self, lastname):
         self.lastname = lastname
 
-class Parent2:
-    def __init__(self, lastParent):
+class Parent2(Parent1):
+    def __init__(self, lastParent, lastname):
+        super().__init__(lastname)
         self.lastParent = lastParent
 
-class childone(Parent1, Parent2):
+class childone(Parent2):
     def __init__(self, name, lastname, lastParent):
-        super().__init__(lastname)
-        super().__init__(lastParent)
+        super().__init__(lastname, lastParent)
+
         self.name = name
     
     def show(self):
-        print(self.name, self.lastname)
+        print(self.name, self.lastname, self.lastParent)
 
 child2 = childone("hari", "kumar", "singh")
 child2.show()
