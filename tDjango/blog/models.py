@@ -8,7 +8,7 @@ class Category(models.Model):
     image = models.ImageField(upload_to='category', blank=True, null=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} and {self.image}"
 
 class Blog(models.Model):
     title = models.CharField(max_length=50)
