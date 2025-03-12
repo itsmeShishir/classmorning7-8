@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Category, Blog
-
+from auths.models import User
 # Create your views here.
 
 # def index(request):
@@ -29,3 +29,23 @@ def category(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def admins(request):
+    total_users = User.objects.count()
+    total_category = Category.objects.count()
+    total_blog = Blog.objects.count()
+    context = {
+        "total_users": total_users,
+        "total_category": total_category,
+        "total_blog": total_blog
+    }
+    return render(request, "admins.html", context)
+
+# create category
+def create_category(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        image = request.FILES.get("image")
+        Category.objects.create(name=name, image=image)
+        return redirect("admins")
+    return render(request, "categoryadmin.html")
