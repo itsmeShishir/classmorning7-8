@@ -49,3 +49,29 @@ def create_category(request):
         Category.objects.create(name=name, image=image)
         return redirect("admins")
     return render(request, "categoryadmin.html")
+
+#get category
+def get_category(request):
+    category = Category.objects.all()
+    context = {
+        "category": category
+    }
+    return render(request, "categorylistadmin.html", context)
+
+# update Cateogry -> id , pk -> primary key
+def update_category(request, pk):
+    category = get_object_or_404(Category, id=pk)
+    if request.method == "POST":
+        name = request.POST.get("name")
+        image = request.FILES.get("image")
+        category.name = name
+        category.image = image
+        category.save()
+        return redirect("admins")
+    return render(request, "categoryupdate.html", {"category": category})
+
+# delete -> category, id , pk -> primary key
+def delete_category(request, pk):
+    category = get_object_or_404(Category, id=pk)
+    category.delete()
+    return redirect("admins")
