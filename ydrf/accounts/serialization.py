@@ -7,4 +7,11 @@
 
 from rest_framework import serializers
 from .models import User
+
+# Register User, UserSerializer, ChnagePassword, Update Acount, Logouts
+
+class RegisterUserSerialization(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['email', 'username', 'password']
  
