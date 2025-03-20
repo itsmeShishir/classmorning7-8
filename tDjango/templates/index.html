@@ -37,14 +37,14 @@
                             </div>
                         </div>
                         {% for cat in category %}
-                            <div class="col-lg-3">
+                            <a href="{% url 'get_category_blogs' cat.id %}" class="col-lg-3">
                             <div class="position-relative mb-3">
                                 <img class="img-fluid w-100" src="http://127.0.0.1:8000/media/{{cat.image}}" style="object-fit: cover; height: 200px; width: 200px;">
                                 <div class="bg-white border border-top-0 p-4">
                                     <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="">{{cat.name}}</a>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         {% endfor %}
                         
                     </div>
