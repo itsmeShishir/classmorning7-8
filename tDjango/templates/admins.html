@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 bg-dark text-white">
+                <h1>Admin Page</h1>
+
+            </div>
+            
+            <div class="col-md-3">
+                <h2>Total Users</h2>
+                <h2>{{ total_users }}</h2>
+            </div>
+            <div class="col-md-3">
+                <h2>Total Category</h2>
+                <h2>{{ total_category }}</h2>
+            </div>
+            <div class="col-md-3">
+                <h2>Total Blog</h2>
+                <h2>{{ total_blog }}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Link to Admin Page</h1>
+            <a href="{% url 'admins' %}">Admin Page</a>
+
+        </div>
+    </div>
+{% endblock %}
+

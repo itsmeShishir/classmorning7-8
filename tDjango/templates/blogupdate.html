@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 bg-dark text-white">
+                <h1>Admin Page</h1>
+
+            </div>
+            
+            <div class="col-md-6">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Title</label>
+                        <input type="text"  class="form-control" value="{{ blog.title }}" id="name" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Description</label>
+                        <textarea type="text"  class="form-control"  id="name" name="desc">{{ blog.desc}} </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" class="form-control" id="image" name="image" value="{{ blog.image.url }}" placeholder="{{ blog.image.url }}">
+                    </div>
+                    <div>
+                        <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="width: 100px; height: 100px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">isFeatured</label>
+                        <input type="checkbox"  class="form-control" id="name" name="isFeatured" value="{{ blog.isFeatured }}" >
+                    </div>
+                    <div class="form-group">
+                        <label for="name">isSlider</label>
+                        <input type="checkbox" class="form-control" id="name" name="isSlider" value="{{ blog.isSlider }}" >
+                    </div>
+                    <div class="form-group">
+                        <label for="name">isTrending</label>
+                        <input type="checkbox"  class="form-control" id="name" name="isTrending" value="{{ blog.isTrending }}">
+                    </div>
+                    <div>
+                        <label for="">Category</label>
+                        <select name="category" id="category" name="category" class="form-control">
+                            <option value="{{ blog.category.id }}">{{ blog.category.name }}</option>
+                            {% for category in category %}
+                                <option value="{{ category.id }}">{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Link to Admin Page</h1>
+            <a href="{% url 'admins' %}">Admin Page</a>
+
+        </div>
+    </div>
+{% endblock %}
+

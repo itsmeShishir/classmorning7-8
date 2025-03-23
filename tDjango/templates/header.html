@@ -48,6 +48,16 @@
                         <button class="input-group-text bg-primary text-dark border-0 px-3"><i
                                 class="fa fa-search"></i></button>
                     </div>
+                    {% comment %} login  username and login -> buton {% endcomment %}
+                    {% if user.is_authenticated %}
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ user.username }}</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="{% url 'login' %}" class="dropdown-item">Dashboard</a>
+                            <a href="{% url 'logout' %}" class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                    {% else %}
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Auths</a>
                         <div class="dropdown-menu rounded-0 m-0">
@@ -55,6 +65,7 @@
                             <a href="{% url 'register' %}" class="dropdown-item">Register</a>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </nav>

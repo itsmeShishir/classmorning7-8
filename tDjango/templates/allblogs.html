@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Category List</h1>
+    <a href="{% url 'create_blog' %}" class="btn btn-primary">Add Blogs</a>
+    <hr>
+    <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for categorys in blog %}
+                <tr>
+                    <th scope="row">{{ categorys.id }}</th>
+                    <td>{{ categorys.name }}</td>
+                    <td>{{ categorys.desc }}</td>
+                    <td><img src="{{ categorys.image.url }}" alt="{{ categorys.image }}" style="width: 100px; height: 100px;"></td>
+                    <td class="d-flex gap-2">
+                        <a href="{% url 'update_blog' categorys.id %}" class="btn btn-primary">Update</a>
+                        <form action="{% url 'delete_blog' categorys.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+</div>
+
+{% endblock %}
