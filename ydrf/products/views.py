@@ -75,10 +75,16 @@ class CategoryList(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
+   
 # detail , # retrieve , # update , # destroy
-class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
+class CategoryDetail(generics.RetrieveUpdateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+    def delete(self, request, *args, **kwargs):
+        category = self.get_object()
+        category.delete()
+        return Response({"message": "Category deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
 
 class ProductView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
